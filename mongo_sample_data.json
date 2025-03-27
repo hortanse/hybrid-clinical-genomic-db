@@ -1,0 +1,132 @@
+{
+  "sample_document": {
+    "sample_id": "12345",
+    "external_id": "EXT-12345",
+    "mysql_sample_id": 42,
+    "mysql_patient_id": 15,
+    "analysis_date": "2023-06-15T10:30:45Z",
+    "analysis_pipeline": "GenomicsCore v2.1",
+    "reference_genome": "GRCh38",
+    "sequencing_stats": {
+      "total_reads": 150000000,
+      "mapped_reads": 148500000,
+      "percent_mapped": 99.0,
+      "mean_coverage": 30.5,
+      "percent_bases_over_20x": 95.2
+    },
+    "variants": [
+      {
+        "variant_id": "chr1_12345_A_G",
+        "chromosome": "chr1",
+        "position": 12345,
+        "reference_allele": "A",
+        "alternate_allele": "G",
+        "gene": "BRCA1",
+        "transcript": "NM_007294.4",
+        "hgvs_c": "c.123A>G",
+        "hgvs_p": "p.Lys41Arg",
+        "variant_type": "SNV",
+        "zygosity": "heterozygous",
+        "coverage": 32,
+        "quality": 99.8,
+        "allele_frequency": 0.48,
+        "clinical_significance": "Pathogenic",
+        "annotations": {
+          "sift": {
+            "score": 0.01,
+            "prediction": "Deleterious"
+          },
+          "polyphen": {
+            "score": 0.98,
+            "prediction": "Probably Damaging"
+          },
+          "cadd": 25.6,
+          "gnomad": {
+            "allele_frequency": 0.0001,
+            "homozygous": 0,
+            "heterozygous": 15
+          }
+        },
+        "phenotypes": ["Hereditary Breast and Ovarian Cancer Syndrome"],
+        "citations": ["PMID:12345678", "PMID:87654321"]
+      },
+      {
+        "variant_id": "chr17_41245466_G_A",
+        "chromosome": "chr17",
+        "position": 41245466,
+        "reference_allele": "G",
+        "alternate_allele": "A",
+        "gene": "BRCA1",
+        "transcript": "NM_007294.4",
+        "hgvs_c": "c.5516G>A",
+        "hgvs_p": "p.Val1839Met",
+        "variant_type": "SNV",
+        "zygosity": "heterozygous",
+        "coverage": 28,
+        "quality": 99.5,
+        "allele_frequency": 0.51,
+        "clinical_significance": "Uncertain Significance",
+        "annotations": {
+          "sift": {
+            "score": 0.08,
+            "prediction": "Tolerated"
+          },
+          "polyphen": {
+            "score": 0.45,
+            "prediction": "Possibly Damaging"
+          },
+          "cadd": 15.2,
+          "gnomad": {
+            "allele_frequency": 0.0005,
+            "homozygous": 1,
+            "heterozygous": 88
+          }
+        },
+        "phenotypes": [],
+        "citations": []
+      }
+    ],
+    "copy_number_variants": [
+      {
+        "cnv_id": "cnv_chr3_12345678_12400000",
+        "chromosome": "chr3",
+        "start": 12345678,
+        "end": 12400000,
+        "type": "Deletion",
+        "copy_number": 1,
+        "genes_affected": ["FOXP1"],
+        "size": 54322,
+        "confidence": "High",
+        "clinical_significance": "Likely Pathogenic"
+      }
+    ],
+    "structural_variants": [
+      {
+        "sv_id": "sv_chr9_chr22_34567890_12345678",
+        "type": "Translocation",
+        "chromosomes": ["chr9", "chr22"],
+        "breakpoints": [34567890, 12345678],
+        "genes_affected": ["ABL1", "BCR"],
+        "fusion": "BCR-ABL1",
+        "clinical_significance": "Pathogenic",
+        "phenotypes": ["Chronic Myeloid Leukemia"]
+      }
+    ],
+    "metainfo": {
+      "created_at": "2023-06-15T15:30:45Z",
+      "created_by": "pipeline_user",
+      "version": 1
+    }
+  },
+  
+  "schema_description": {
+    "sample_id": "Unique identifier for the sample",
+    "external_id": "External identifier from collaborator or lab",
+    "mysql_sample_id": "Foreign key reference to the MySQL samples table",
+    "mysql_patient_id": "Foreign key reference to the MySQL patients table",
+    "variants": "Array of variant objects with detailed annotation information",
+    "copy_number_variants": "Array of CNV objects with size and affected genes",
+    "structural_variants": "Array of SV objects representing larger rearrangements",
+    "metainfo": "Document metadata for tracking purposes"
+  }
+} 

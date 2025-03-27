@@ -1,0 +1,24 @@
+# API and web server
+fastapi==0.95.1
+uvicorn==0.22.0
+pydantic==1.10.7
+
+# Database drivers
+mysql-connector-python==8.0.33
+pymongo==4.3.3
+
+# Data generation and handling
+faker==18.4.0
+pandas==2.0.1
+numpy==1.24.3
+
+# Date handling
+python-dateutil==2.8.2
+
+# Testing
+pytest==7.3.1
+pytest-mock==3.10.0
+httpx==0.24.0  # For testing FastAPI
+
+# Utilities
+python-dotenv==1.0.0  # For environment variables 
